@@ -21,14 +21,16 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { MatMenuModule } from '@angular/material/menu'
+import { MatMenuModule } from '@angular/material/menu';
+import { ListComponent } from './Purchase/Order/list/list.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     NavComponent,
-    DashboardComponent
+    DashboardComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
