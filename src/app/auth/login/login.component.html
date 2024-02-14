@@ -1,0 +1,24 @@
+<div fxLayoutAlign="center center" fxFlexFill class="mainDiv">
+  <mat-card fxFlex="25">
+    <mat-toolbar color="primary">
+        ERP Login Form
+    </mat-toolbar>
+    <!-- <div *ngIf="showError" class="alert alert-danger" role="alert">
+      {{errorMessage}}
+   </div> -->
+   <mat-error *ngIf="showError" style="padding: 20px;">{{errorMessage}}</mat-error>
+   <!-- <mat-spinner *ngIf="this.isLoading"></mat-spinner> -->
+    <form fxLayoutAlign="stretch" fxLayout="column" class="loginform" 
+     [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <mat-label>UserName</mat-label>
+        <input matInput placeholder="Please enter UserName" value=""  formControlName="userName">
+      </mat-form-field>   
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput type="password" placeholder="Please enter Password" formControlName="password">
+      </mat-form-field>
+      <button mat-raised-button color="primary" [disabled]="!loginForm.valid">Login</button>
+    </form>
+  </mat-card>
+</div>
